@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-            rel="stylesheet"
-        />
-        <title>Document</title>
-    </head>
-    <body>
-        <header class="h-20 bg-blue-400 p-1 flex items-center justify-between  ">
-            <div class="overflow-hidden rounded-full">
-                <img class="w-16 object-cover" src="img/logo.jpg" alt="" />
-            </div>
-            <h1 class="text-gray-50 text-4xl">Hotel el Rincón del
-                Camila</h1>
-            <div class="flex flex-rows gap-10">
-                <div>
-                    <input class=" w-28 h-8 rounded-3xl" type="button" value="Disponibilidad" />
-                </div>
-                <div>
-                    <input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" />
-                </div>
-            </div>
-        </header>
-        <section class="w-full max-w-3xl mx-auto mt-10">
-            <div class="relative">
-              <div id="slider" class="overflow-hidden">
-                <div class="flex transition-transform duration-500 ease-in-out">
-                  <div class="w-full flex-shrink-0">
-                    <img src="img/habitacion1.jpg" alt="Imagen 1" class="w-full">
-                  </div>
-                  <div class="w-full flex-shrink-0">
-                    <img src="img/restaurante.jpg" alt="Imagen 2" class="w-full">
-                  </div>
-                  <div class="w-full flex-shrink-0">
-                    <img src="img/habitacion2.jpg" alt="Imagen 3" class="w-full">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg">‹</button>
-      <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg">›</button>
-        </section>
-    </body>
-    <script src="js/index.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <title>Hotel-Rincón-Camila</title>
+</head>
+
+<body>
+  <header class="h-20 bg-blue-400 p-1 flex items-center justify-between  ">
+    <div class="overflow-hidden rounded-full">
+      <img class="w-16 object-cover" src="img/logo.jpg" alt="" />
+    </div>
+    <h1 class="text-gray-50 text-4xl">Hotel el Rincón del
+      Camila</h1>
+    <div class="flex flex-rows gap-10">
+      <div>
+        <input class=" w-28 h-8 rounded-3xl" type="button" value="Disponibilidad" />
+      </div>
+      <div>
+        <input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" />
+      </div>
+    </div>
+  </header>
+  <!-- Carrusel -->
+  <section class="w-full max-w-3xl mx-auto mt-10 border-gray-300">
+    <div class="relative">
+      <ul id="slider">
+        <li class="h-[40vh] w-full relative hidden">
+          <img src="img/restaurante.jpg" alt="Imagen 2" class="h-full w-full object-cover">
+        </li>
+        <li class="h-[50vh] w-full relative">
+          <img src="img/habitacion1.jpg" alt="Imagen 1" class="h-full w-full object-cover">
+        </li>
+        <li class="h-[40vh] w-full relative hidden">
+          <img src="img/habitacion2.0.jpg" alt="Imagen 3" class="h-full w-full object-cover">
+        </li>
+      </ul>
+      <div class="absolute px-5 flex h-full w-full top-0 
+            left-0">
+        <div class="my-auto w-full flex justify-between">
+          <button onclick="next()"
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg">‹</button>
+          <button onclick="prev()"
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Catologo de las Habitcaciones -->
+  <section>
+
+  </section>
+  <!-- Usuario -->
+  <section class="w-full max-w-3xl mx-auto mt-10">
+    <div id="login" class="flex justify-center items-center">
+      <div class="flex flex-col gap-y-3.5">
+        <input class="w-48" placeholder="Ingrese de Email" type="email" name="mail" id="mail">
+        <input class="w-48" placeholder="Ingrese Usuario" type="text" name="us" id="us">
+        <div class="flex justify-center">
+        <input class="w-28 h-8 rounded-3xl" type="button" id="bnt" value="Ingresar">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="js/index.js"></script>
 </html>

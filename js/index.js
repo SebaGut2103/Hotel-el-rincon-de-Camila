@@ -1,25 +1,66 @@
-//La funcionalidad del carrusel
-const slider = document.getElementById("slider");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
+//Funcionalidad del Carrusel o Slider
+currentSlideID = 1;
+sliderElement = document.getElementById("slider");
+totalSlides = sliderElement.childElementCount;
 
-let currentIndex = 0;
+function showSlide() {
+  // Ocultar todas las diapositivas
+  for (let i = 0; i < totalSlides; i++) {
+    sliderElement.children[i].style.display = "none";
+  }
 
-function updateSliderPosition() {
-  const slides = slider.querySelectorAll('.flex-shrink-0');
-  const totalSlides = slides.length;
-  const slideWidth = slides[0].offsetWidth;
-  const newTransformValue = -currentIndex * slideWidth;
-
-  slider.style.transform = `translateX(${newTransformValue}px)`;
+  // Mostrar la diapositiva actual
+  sliderElement.children[currentSlideID - 1].style.display = "block";
 }
 
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? slider.querySelectorAll('.flex-shrink-0').length - 1 : currentIndex - 1;
-  updateSliderPosition();
-});
+function next() {
+  if (currentSlideID < totalSlides) {
+    currentSlideID++;
+  } else {
+    currentSlideID = 1; // Volver a la primera diapositiva
+  }
+  showSlide();
+}
 
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex === slider.querySelectorAll('.flex-shrink-0').length - 1) ? 0 : currentIndex + 1;
-  updateSliderPosition();
-});
+function prev(){
+  if(currentSlideID > 1){
+    currentSlideID--;{
+      showSlide()
+    }
+  }
+}
+// Iniciar el slider automático
+setInterval(next, 3000); // Cambiar cada 3 segundos
+
+// Inicializar la primera diapositiva
+showSlide();
+
+function showSlide() {
+  slide = document.getElementById("slider").getElementsByTagName("li");
+  for (let index = 0; index < totalSlides; index++) {
+    const element = slide[index];
+    if (currentSlideID === index + 1) {
+      element.classList.remove("hidden")
+    } else {
+      element.classList.add("hidden")
+    }
+  }
+}
+
+//Login
+const button = document.getElementById("bnt")
+
+
+
+//Funcionalidad que muestre las habitaciones (api)
+const options = {
+  method:" GET",
+  Headers:{
+    "Content-Type": "application/json",
+  }
+}
+
+fetch("http://localhost:3000/posts")
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(error => error.log(error));

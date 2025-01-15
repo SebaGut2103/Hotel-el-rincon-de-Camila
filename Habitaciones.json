@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "Habitacion-1": "Suite-Prisendical",
+      "Inside": "typicode",
+      "img":""
+    },
+    {
+      "id": 2,
+      "Habitacion-1": "Suite-Prisendical",
+      "Inside": "typicode"
+    },
+    {
+      "id": 3,
+      "Habitacion-1": "Suite-Prisendical",
+      "Inside": "typicode"
+    },
+    {
+      "id": 4,
+      "Habitacion-1": "Suite-Prisendical",
+      "Inside": "typicode"
+    },
+    {
+      "id": 5,
+      "Habitacion-1": "Suite-Prisendical",
+      "Inside": "typicode"
+    }
+  ]
+}
