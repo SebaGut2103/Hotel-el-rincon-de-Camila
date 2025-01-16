@@ -47,9 +47,28 @@ function showSlide() {
   }
 }
 
-//Login
-const button = document.getElementById("bnt")
-
-
-
 //Funcionalidad que muestre las habitaciones (api)
+
+async function pintarHabitaciones(){
+  let target = "";
+  pintarHabitaciones.forEach((element,index) => {
+    target += `<div class="max-auto rounded overflow-hidden shadow-lg bg-white flex w3/5">
+    
+    <div class="relative w-full h-48 overflow-hidden" onmouseover="startSlide(${index})" onmouseover="StopSlide()"
+    `
+    let strings= "";
+    for(img in element.images){
+      strings += `<img class="slide w-full h-full object-cover slide-${index}"
+        src="${element.images[img]}" alt="Suite Ejecutivo - Foto 1" id="">
+      `
+    }    
+    target += strings + `</div>
+    <div class="p-4">
+    <h2 class="font-bold text-xl mb-2"> ${element.nombre}</h2>
+    <p class="text-gray-700 mb-2">
+    ${element.description}
+    </p>
+    `
+  });
+  target.inner.HTML = target;
+}
