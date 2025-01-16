@@ -8,34 +8,46 @@
   <title>Hotel-Rincón-Camila</title>
 </head>
 
-<body>
-  <header class="h-20 bg-blue-400 p-1 flex items-center justify-between  ">
-    <div class="overflow-hidden rounded-full">
+<body class="bg-blue-900">
+  <header class=" bg-blue-400 p-1 flex items-center justify-between  ">
+    <div class="overflow-hidden rounded-full border-gray-800">
       <img class="w-16 object-cover" src="img/logo.jpg" alt="" />
     </div>
     <h1 class="text-gray-50 text-4xl">Hotel el Rincón del
       Camila</h1>
     <div class="flex flex-rows gap-10">
       <div>
-        <input class=" w-28 h-8 rounded-3xl" type="button" value="Disponibilidad" />
+        <input class=" w-28 h-8 rounded-3xl" type="button" value="Reserva" />
       </div>
       <div>
         <input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" />
       </div>
     </div>
   </header>
+  <div id="wsp" class="overflow-hidden fixed left-2 top-72 z-10 border-double border-gray-800">
+    <img src="wsp.png" alt="wsp" class="w-32 object-cover  ">
+  </div>
   <!-- Carrusel -->
-  <section class="w-full max-w-3xl mx-auto mt-10 border-gray-300">
-    <div class="relative">
+  <section class=" w-full max-w-3xl mx-auto mt-10  border-4 border-indigo-500/50">
+    <div class="relative ">
       <ul id="slider">
-        <li class="h-[40vh] w-full relative hidden">
+        <li class="h-96 w-full relative hidden">
           <img src="img/restaurante.jpg" alt="Imagen 2" class="h-full w-full object-cover">
         </li>
-        <li class="h-[50vh] w-full relative">
+        <li class="h-96 w-full relative">
           <img src="img/habitacion1.jpg" alt="Imagen 1" class="h-full w-full object-cover">
         </li>
-        <li class="h-[40vh] w-full relative hidden">
-          <img src="img/habitacion2.0.jpg" alt="Imagen 3" class="h-full w-full object-cover">
+        <li class="h-96 w-full overflow-hidden relative hidden">
+          <img src="img/habitacion2.0.jpg" alt="Imagen 3" class="h-96 w-full object-cover">
+        </li>
+        <li class="h-96 w-full overflow-hidden relative hidden">
+          <img src="img/2-4.webp" alt="Imagen 3" class="h-96 w-full object-cover">
+        </li>
+        <li class="h-96 w-full overflow-hidden relative hidden">
+          <img src="img/Habitacion3.png" alt="Imagen 3" class="h-96 w-full object-cover">
+        </li>
+        <li class="h-96 w-full overflow-hidden relative hidden">
+          <img src="img/habitacion4.png" alt="Imagen 3" class="h-96 w-full object-cover">
         </li>
       </ul>
       <div class="absolute px-5 flex h-full w-full top-0 
@@ -51,17 +63,67 @@
   </section>
   <!-- Catologo de las Habitcaciones -->
   <section>
-
+    
   </section>
   <!-- Usuario -->
-  <section class="w-full max-w-3xl mx-auto mt-10">
-    <div id="login" class="flex justify-center items-center">
-      <div class="flex flex-col gap-y-3.5">
-        <input class="w-48" placeholder="Ingrese de Email" type="email" name="mail" id="mail">
-        <input class="w-48" placeholder="Ingrese Usuario" type="text" name="us" id="us">
-        <div class="flex justify-center">
-        <input class="w-28 h-8 rounded-3xl" type="button" id="bnt" value="Ingresar">
-        </div>
+  <section class="h-full w-full max-w-4xl mx-auto mt-10 p-6">
+    <div id="registration" class="flex justify-center items-center border-4 border-indigo-500/50 p-8 rounded-lg shadow-lg">
+      <div class="flex flex-col gap-y-6 w-full">
+        <h1 class="text-4xl font-semibold text-center text-gray-50">Registro en el Hotel</h1>
+        
+        <!-- Formulario de Registro -->
+        <form class="flex flex-col gap-y-5">
+          
+          <!-- Campo Nombre Completo -->
+          <label for="fullname" class="text-xl text-gray-50">Nombre Completo</label>
+          <input 
+            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text" 
+            name="fullname" 
+            id="fullname" 
+            placeholder="Ingresa tu nombre completo"
+            required
+          >
+  
+          <!-- Campo Correo Electrónico -->
+          <label for="email" class="text-xl text-gray-50">Correo Electrónico</label>
+          <input 
+            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder="Correo electrónico"
+            required
+          >
+          
+          <!-- Campo Teléfono -->
+          <label for="phone" class="text-xl text-gray-50">Número de Teléfono</label>
+          <input 
+            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="tel" 
+            name="phone" 
+            id="phone" 
+            placeholder="Número de teléfono"
+            pattern="^[0-9]{10}$"
+            required
+          >
+          <!-- Campo Comentarios o Peticiones Especiales -->
+          <label for="comments" class="text-xl text-gray-50">Comentarios / Peticiones Especiales</label>
+          <textarea 
+            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            name="comments" 
+            id="comments" 
+            placeholder="Escribe tus comentarios o peticiones especiales"></textarea>
+  
+          <!-- Botón Enviar -->
+          <div class="flex justify-center mt-6">
+            <button 
+              class="w-28 h-12 rounded-3xl bg-indigo-600 text-white text-lg font-semibold hover:bg-indigo-700 cursor-pointer transition duration-300"
+              type="submit">Registrar
+            </button>
+          </div>
+          
+        </form>
       </div>
     </div>
   </section>

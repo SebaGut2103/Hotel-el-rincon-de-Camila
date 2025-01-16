@@ -2,29 +2,45 @@
   "posts": [
     {
       "id": 1,
-      "Habitacion-1": "Suite-Prisendical",
-      "Inside": "typicode",
-      "img":""
+      "nombre": "Habitación Ejecutiva",
+      "precio": "$15.60",
+      "img": "url_imagen_habitacion_ejecutiva.jpg"
     },
     {
       "id": 2,
-      "Habitacion-1": "Suite-Prisendical",
-      "Inside": "typicode"
+      "nombre": "Habitación Deluxe",
+      "precio": "$30.00",
+      "img": "url_imagen_habitacion_deluxe.jpg"
     },
     {
       "id": 3,
-      "Habitacion-1": "Suite-Prisendical",
-      "Inside": "typicode"
+      "nombre": "Suite Presidencial",
+      "precio": "$150.00",
+      "img": "url_imagen_suite_presidencial.jpg"
     },
     {
       "id": 4,
-      "Habitacion-1": "Suite-Prisendical",
-      "Inside": "typicode"
+      "nombre": "Suite Presidencial Vista Mar",
+      "precio": "$200.00",
+      "img": "url_imagen_suite_presidencial_vista_mar.jpg"
     },
     {
       "id": 5,
-      "Habitacion-1": "Suite-Prisendical",
-      "Inside": "typicode"
+      "nombre": "Suite Presidencial Deluxe",
+      "precio": "$250.00",
+      "img": "url_imagen_suite_presidencial_deluxe.jpg"
+    },
+    {
+      "id":6,
+      "nombre":"Suite Presidencial Junior",
+      "precio":"$100.00",
+      "img":""
+    },
+    {
+      "id":7,
+      "nombre":"Habitacion individual",
+      "precio":"$15.60",
+      "img":""
     }
   ]
 }

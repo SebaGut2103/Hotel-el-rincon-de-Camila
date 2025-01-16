@@ -30,7 +30,7 @@ function prev(){
   }
 }
 // Iniciar el slider automático
-setInterval(next, 3000); // Cambiar cada 3 segundos
+setInterval(next, 4000); // Cambiar cada 3 segundos
 
 // Inicializar la primera diapositiva
 showSlide();
@@ -53,14 +53,3 @@ const button = document.getElementById("bnt")
 
 
 //Funcionalidad que muestre las habitaciones (api)
-const options = {
-  method:" GET",
-  Headers:{
-    "Content-Type": "application/json",
-  }
-}
-
-fetch("http://localhost:3000/posts")
-  .then(res => res.json())
-  .then(res => console.log(res))
-  .catch(error => error.log(error));

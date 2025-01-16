@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wsp" class="overflow-hidden fixed left-2 top-72 z-10 border-double border-gray-800">
+        <img src="../wsp.png" alt="wsp" class="w-32 object-cover  ">
+      </div>
+    <section class="h-full w-full max-w-4xl mx-auto mt-10 p-6">
+        <div id="registration"
+            class="flex justify-center items-center border-4 border-indigo-500/50 p-8 rounded-lg shadow-lg">
+            <div class="flex flex-col gap-y-6 w-full">
+                <!-- Campo Fecha de Entrada -->
+                <label for="checkin" class="text-xl text-gray-700">Fecha de Entrada</label>
+                <input
+                    class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    type="date" name="checkin" id="checkin" required>
+
+                <!-- Campo Fecha de Salida -->
+                <label for="checkout" class="text-xl text-gray-700">Fecha de Salida</label>
+                <input
+                    class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    type="date" name="checkout" id="checkout" required>
+
+                <!-- Campo Tipo de Habitación -->
+                <label for="room-type" class="text-xl text-gray-700">Tipo de Habitación</label>
+                <select
+                    class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    name="room-type" id="room-type" required>
+                    <option value="simple">Habitación Simple</option>
+                    <option value="double">Habitación Doble</option>
+                    <option value="suite">Suite</option>
+                    <option value="presidential">Suite Presidencial</option>
+                    
+                </select>
+                <div class="flex justify-center mt-6">
+                    <button 
+                      class="w-28 h-12 rounded-3xl bg-indigo-600 text-white text-lg font-semibold hover:bg-indigo-700 cursor-pointer transition duration-300"
+                      type="submit">Registrar
+                    </button>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
