@@ -41,6 +41,12 @@
       "nombre":"Habitacion individual",
       "precio":"$15.60",
       "img":"https://media.gettyimages.com/id/1159130196/es/foto/pompano-beach-florida-united-states-a-luxurious-bedroom-in-the-wyndham-palm-air-resort-which.jpg?s=612x612&w=0&k=20&c=p3SavzIf3QD5oZHuE4kGJadPXTBt3hoOFbPEz6QFhuA="
+    },
+    {
+      "id":8,
+      "nombre":"Habitacion doble",
+      "precio":"$30.00",
+      "img":"https://www.stradivariushotel.com/wp-content/uploads/ss-h2-f1-1.jpg"
     }
   ]
 }

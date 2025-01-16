@@ -48,27 +48,68 @@ function showSlide() {
 }
 
 //Funcionalidad que muestre las habitaciones (api)
+function createRoomCard(room) {
+  const card = document.createElement('div');
+  card.className = 'bg-white rounded-lg shadow-md overflow-hidden';
 
-async function pintarHabitaciones(){
-  let target = "";
-  pintarHabitaciones.forEach((element,index) => {
-    target += `<div class="max-auto rounded overflow-hidden shadow-lg bg-white flex w3/5">
-    
-    <div class="relative w-full h-48 overflow-hidden" onmouseover="startSlide(${index})" onmouseover="StopSlide()"
-    `
-    let strings= "";
-    for(img in element.images){
-      strings += `<img class="slide w-full h-full object-cover slide-${index}"
-        src="${element.images[img]}" alt="Suite Ejecutivo - Foto 1" id="">
-      `
-    }    
-    target += strings + `</div>
-    <div class="p-4">
-    <h2 class="font-bold text-xl mb-2"> ${element.nombre}</h2>
-    <p class="text-gray-700 mb-2">
-    ${element.description}
-    </p>
-    `
-  });
-  target.inner.HTML = target;
+  const imageContainer = document.createElement('div');
+  imageContainer.className = 'relative h-48';
+
+  const image = document.createElement('img');
+  image.src = room.img;
+  image.alt = room.nombre;
+  image.className = 'absolute h-full w-full object-cover';
+
+  const content = document.createElement('div');
+  content.className = 'p-4';
+
+  const title = document.createElement('h3');
+  title.className = 'text-lg font-semibold text-gray-800';
+  title.textContent = room.nombre;
+
+  const price = document.createElement('p');
+  price.className = 'text-gray-600 mt-2';
+  price.textContent = `Precio: ${room.precio}`;
+
+  imageContainer.appendChild(image);
+  content.appendChild(title);
+  content.appendChild(price);
+  card.appendChild(imageContainer);
+  card.appendChild(content);
+
+  return card;
 }
+
+// Función para cargar y mostrar las habitaciones
+function loadRooms() {
+  const roomsContainer = document.getElementById('rooms-container');
+  
+  // Mostrar un mensaje de carga
+  roomsContainer.innerHTML = '<p class="text-white">Cargando habitaciones...</p>';
+
+  // Hacer la petición a la API
+  fetch('http://localhost:3000/posts')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(rooms => {
+      // Limpiar el contenedor
+      roomsContainer.innerHTML = '';
+
+      // Procesar los datos y crear las tarjetas
+      rooms.forEach(room => {
+        const card = createRoomCard(room);
+        roomsContainer.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      roomsContainer.innerHTML = '<p class="text-white">Error al cargar las habitaciones. Por favor, intente más tarde.</p>';
+    });
+}
+
+// Cargar las habitaciones cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', loadRooms);

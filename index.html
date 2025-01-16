@@ -1,132 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <title>Hotel-Rincón-Camila</title>
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-  <title>Hotel-Rincón-Camila</title>
-</head>
-
-<body class="bg-blue-900">
-  <header class=" bg-blue-400 p-1 flex items-center justify-between  ">
-    <div class="overflow-hidden rounded-full border-gray-800">
-      <img class="w-16 object-cover" src="img/logo.jpg" alt="" />
-    </div>
-    <h1 class="text-gray-50 text-4xl">Hotel el Rincón del
-      Camila</h1>
-    <div class="flex flex-rows gap-10">
-      <div>
-        <input class=" w-28 h-8 rounded-3xl" type="button" value="Reserva" />
-      </div>
-      <div>
-        <input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" />
-      </div>
-    </div>
-  </header>
-  <div id="wsp" class="overflow-hidden fixed left-2 top-72 z-10 border-double border-gray-800">
-    <img src="wsp.png" alt="wsp" class="w-32 object-cover  ">
-  </div>
-  <!-- Carrusel -->
-  <section class=" w-full max-w-3xl mx-auto mt-10  border-4 border-indigo-500/50">
-    <div class="relative ">
-      <ul id="slider">
-        <li class="h-96 w-full relative hidden">
-          <img src="img/restaurante.jpg" alt="Imagen 2" class="h-full w-full object-cover">
-        </li>
-        <li class="h-96 w-full relative">
-          <img src="img/habitacion1.jpg" alt="Imagen 1" class="h-full w-full object-cover">
-        </li>
-        <li class="h-96 w-full overflow-hidden relative hidden">
-          <img src="img/habitacion2.0.jpg" alt="Imagen 3" class="h-96 w-full object-cover">
-        </li>
-        <li class="h-96 w-full overflow-hidden relative hidden">
-          <img src="img/2-4.webp" alt="Imagen 3" class="h-96 w-full object-cover">
-        </li>
-        <li class="h-96 w-full overflow-hidden relative hidden">
-          <img src="img/Habitacion3.png" alt="Imagen 3" class="h-96 w-full object-cover">
-        </li>
-        <li class="h-96 w-full overflow-hidden relative hidden">
-          <img src="img/habitacion4.png" alt="Imagen 3" class="h-96 w-full object-cover">
-        </li>
-      </ul>
-      <div class="absolute px-5 flex h-full w-full top-0 
-            left-0">
-        <div class="my-auto w-full flex justify-between">
-          <button onclick="next()"
-            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg">‹</button>
-          <button onclick="prev()"
-            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg">›</button>
+    <body class="bg-blue-900">
+        <header class="bg-blue-400 p-1 flex items-center justify-between">
+            <div class="overflow-hidden rounded-full border-gray-800">
+                <img class="w-16 object-cover" src="img/logo.jpg" alt="" />
+            </div>
+            <h1 class="text-gray-50 text-4xl">Hotel el Rincón del Camila</h1>
+            <div class="flex flex-rows gap-10">
+                <div>
+                    <input
+                        class="w-28 h-8 rounded-3xl"
+                        type="button"
+                        value="Reserva"
+                    />
+                </div>
+                <div>
+                    <input
+                        class="w-28 h-8 rounded-3xl"
+                        type="button"
+                        value="Contacto"
+                    />
+                </div>
+            </div>
+        </header>
+        <div
+            id="wsp"
+            class="overflow-hidden fixed left-2 top-72 z-10 border-double border-gray-800"
+        >
+            <img src="wsp.png" alt="wsp" class="w-32 object-cover" />
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- Catologo de las Habitcaciones -->
-  <section>
-    
-  </section>
-  <!-- Usuario -->
-  <section class="h-full w-full max-w-4xl mx-auto mt-10 p-6">
-    <div id="registration" class="flex justify-center items-center border-4 border-indigo-500/50 p-8 rounded-lg shadow-lg">
-      <div class="flex flex-col gap-y-6 w-full">
-        <h1 class="text-4xl font-semibold text-center text-gray-50">Registro en el Hotel</h1>
-        
-        <!-- Formulario de Registro -->
-        <form class="flex flex-col gap-y-5">
-          
-          <!-- Campo Nombre Completo -->
-          <label for="fullname" class="text-xl text-gray-50">Nombre Completo</label>
-          <input 
-            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            type="text" 
-            name="fullname" 
-            id="fullname" 
-            placeholder="Ingresa tu nombre completo"
-            required
-          >
-  
-          <!-- Campo Correo Electrónico -->
-          <label for="email" class="text-xl text-gray-50">Correo Electrónico</label>
-          <input 
-            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            type="email" 
-            name="email" 
-            id="email" 
-            placeholder="Correo electrónico"
-            required
-          >
-          
-          <!-- Campo Teléfono -->
-          <label for="phone" class="text-xl text-gray-50">Número de Teléfono</label>
-          <input 
-            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            type="tel" 
-            name="phone" 
-            id="phone" 
-            placeholder="Número de teléfono"
-            pattern="^[0-9]{10}$"
-            required
-          >
-          <!-- Campo Comentarios o Peticiones Especiales -->
-          <label for="comments" class="text-xl text-gray-50">Comentarios / Peticiones Especiales</label>
-          <textarea 
-            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            name="comments" 
-            id="comments" 
-            placeholder="Escribe tus comentarios o peticiones especiales"></textarea>
-  
-          <!-- Botón Enviar -->
-          <div class="flex justify-center mt-6">
-            <button 
-              class="w-28 h-12 rounded-3xl bg-indigo-600 text-white text-lg font-semibold hover:bg-indigo-700 cursor-pointer transition duration-300"
-              type="submit">Registrar
-            </button>
-          </div>
-          
-        </form>
-      </div>
-    </div>
-  </section>
-</body>
-<script src="js/index.js"></script>
+        <!-- Carrusel -->
+        <section class="w-full max-w-3xl mx-auto mt-10 border-4 border-indigo-500/50 relative">
+                <ul id="slider">
+                    <li class="h-96 w-full relative hidden">
+                        <img
+                            src="img/restaurante.jpg"
+                            alt="Imagen 2"
+                            class="h-full w-full object-cover"
+                        />
+                    </li>
+                    <li class="h-96 w-full relative">
+                        <img
+                            src="img/habitacion1.jpg"
+                            alt="Imagen 1"
+                            class="h-full w-full object-cover"
+                        />
+                    </li>
+                    <li class="h-96 w-full overflow-hidden relative hidden">
+                        <img
+                            src="img/habitacion2.0.jpg"
+                            alt="Imagen 3"
+                            class="h-96 w-full object-cover"
+                        />
+                    </li>
+                    <li class="h-96 w-full overflow-hidden relative hidden">
+                        <img
+                            src="img/2-4.webp"
+                            alt="Imagen 3"
+                            class="h-96 w-full object-cover"
+                        />
+                    </li>
+                    <li class="h-96 w-full overflow-hidden relative hidden">
+                        <img
+                            src="img/Habitacion3.png"
+                            alt="Imagen 3"
+                            class="h-96 w-full object-cover"
+                        />
+                    </li>
+                    <li class="h-96 w-full overflow-hidden relative hidden">
+                        <img
+                            src="img/habitacion4.png"
+                            alt="Imagen 3"
+                            class="h-96 w-full object-cover"
+                        />
+                    </li>
+                </ul>
+                <div class="absolute px-5 flex h-full w-full top-0 left-0">
+                    <div class="my-auto w-full flex justify-between">
+                        <button
+                            onclick="next()"
+                            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg"
+                        >
+                            ‹
+                        </button>
+                        <button
+                            onclick="prev()"
+                            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg"
+                        >
+                            ›
+                        </button>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Catálogo de las Habitaciones -->
+        <section class="container mx-auto px-4 py-8">
+
+            <h2 class="text-3xl font-bold text-center text-gray-50 mb-8">
+                Nuestras Habitaciones
+            </h2>
+            <div id="rooms-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+           
+            </div>
+        </section>
+          <!-- Mapa -->
+          <section id="map" class="w-full h-96 bg-gray-100">
+            <div class="w-full h-full flex items-center justify-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125576.5435150138!2d-75.59092837972888!3d10.400357080885339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625e7ae9d1351%3A0xb161392e033f26ca!2sCartagena%20de%20Indias%2C%20Provincia%20de%20Cartagena%2C%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1737007679266!5m2!1ses!2sco"
+            class="w-full h-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </section>
+
+        <!-- Usuario -->
+        <section class="h-full w-full max-w-4xl mx-auto mt-10 p-6">
+            <div
+                id="registration"
+                class="flex justify-center items-center border-4 border-indigo-500/50 p-8 rounded-lg shadow-lg"
+            >
+                <div class="flex flex-col gap-y-6 w-full">
+                    <h1 class="text-4xl font-semibold text-center text-gray-50">
+                        Registro en el Hotel
+                    </h1>
+
+                    <!-- Formulario de Registro -->
+                    <form class="flex flex-col gap-y-5">
+                        <!-- Campo Nombre Completo -->
+                        <label for="fullname" class="text-xl text-gray-50"
+                            >Nombre Completo</label
+                        >
+                        <input
+                            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            type="text"
+                            name="fullname"
+                            id="fullname"
+                            placeholder="Ingresa tu nombre completo"
+                            required
+                        />
+
+                        <!-- Campo Correo Electrónico -->
+                        <label for="email" class="text-xl text-gray-50"
+                            >Correo Electrónico</label
+                        >
+                        <input
+                            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Correo electrónico"
+                            required
+                        />
+
+                        <!-- Campo Teléfono -->
+                        <label for="phone" class="text-xl text-gray-50"
+                            >Número de Teléfono</label
+                        >
+                        <input
+                            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Número de teléfono"
+                            pattern="^[0-9]{10}$"
+                            required
+                        />
+                        <!-- Campo Comentarios o Peticiones Especiales -->
+                        <label for="comments" class="text-xl text-gray-50"
+                            >Comentarios / Peticiones Especiales</label
+                        >
+                        <textarea
+                            class="w-full p-3 border-2 border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            name="comments"
+                            id="comments"
+                            placeholder="Escribe tus comentarios o peticiones especiales"
+                        ></textarea>
+
+                        <!-- Botón Enviar -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="w-28 h-12 rounded-3xl bg-indigo-600 text-white text-lg font-semibold hover:bg-indigo-700 cursor-pointer transition duration-300"
+                                type="submit"
+                            >
+                                Registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer  class="bg-blue-400 p-1 flex items-center justify-between">
+
+        </footer>
+    </body>
+    <script src="js/index.js"></script>
 </html>
