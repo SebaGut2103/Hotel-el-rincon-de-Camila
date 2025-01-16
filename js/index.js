@@ -72,7 +72,7 @@ function createRoomCard(room) {
 
   const price = document.createElement('p');
   price.className = 'text-gray-600 mt-2';
-  price.textContent = `Precio: ${room.precio}`;
+  price.textContent = `Precio: ${room.preciopornoche}`;
 
   imageContainer.appendChild(image);
   content.appendChild(title);
@@ -118,48 +118,6 @@ function loadRooms() {
 document.addEventListener('DOMContentLoaded', loadRooms);
 
 
-//Login
-
-document.getElementById('registration').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevenir la recarga de la página al enviar el formulario
-
-  // Obtener los valores del formulario
-  const fullname = document.getElementById('fullname').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const comments = document.getElementById('comments').value;
-
-  // Verificar si ya existen usuarios registrados en localStorage
-  let users = JSON.parse(localStorage.getItem('users')) || [];
-
-  // Verificar si el correo electrónico ya está registrado
-  const userExists = users.some(user => user.email === email);
-  if (userExists) {
-      alert('Este correo electrónico ya está registrado. Por favor, use otro.');
-      return;
-  }
-
-  // Crear un nuevo objeto usuario
-  const newUser = {
-      fullname,
-      email,
-      phone,
-      comments
-  };
-
-  // Agregar el nuevo usuario al arreglo de usuarios
-  users.push(newUser);
-
-  // Guardar los usuarios en localStorage
-  localStorage.setItem('users', JSON.stringify(users));
-
-  // Redirigir al usuario a la página de reservaciones (simulando el acceso después del registro)
-  alert('Registro exitoso. Ahora puede realizar su reservación.');
-  window.location.href = 'Reserva/Reserva.html'; // Redirige a la página de reservaciones
-});
-
-
-
 //Consulta WSP
 document.addEventListener("DOMContentLoaded", function() {
   const wspButton = document.getElementById('wsp');
@@ -174,3 +132,45 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+//Login
+const loginBtn = document.getElementById("loginBtn");
+        const loginModal = document.getElementById("loginModal");
+        const closeBtn = document.getElementById("closeBtn");
+        const loginForm = document.getElementById("loginForm");
+
+        // Abrir el modal cuando se hace clic en el botón
+        loginBtn.onclick = function() {
+            loginModal.classList.remove("hidden");
+            loginModal.classList.add("flex");
+        }
+
+        // Cerrar el modal cuando se hace clic en el botón de cerrar
+        closeBtn.onclick = function() {
+            loginModal.classList.remove("flex");
+            loginModal.classList.add("hidden");
+        }
+
+        // Cerrar el modal si el usuario hace clic fuera del contenido del modal
+        window.onclick = function(event) {
+            if (event.target === loginModal) {
+                loginModal.classList.remove("flex");
+                loginModal.classList.add("hidden");
+            }
+        }
+
+        // Manejar el formulario de login
+        loginForm.onsubmit = function(event) {
+            event.preventDefault(); // Evitar el envío convencional del formulario
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "1234") {
+                alert("¡Bienvenido, " + username + "!");
+                loginModal.classList.remove("flex");
+                loginModal.classList.add("hidden");
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        } 

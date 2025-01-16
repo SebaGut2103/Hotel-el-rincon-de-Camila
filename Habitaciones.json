@@ -3,49 +3,49 @@
     {
       "id": 1,
       "nombre": "Habitación Ejecutiva",
-      "precio por noche": "$15.60",
+      "preciopornoche": "$15.60",
       "img": "https://media.gettyimages.com/id/171579719/es/foto/hotel-moderno-dormitorio.jpg?s=612x612&w=0&k=20&c=aixKyHQELoca8pCibWLIdmTu4Sp7WVQ0jB-d23QgEfk="
     },
     {
       "id": 2,
       "nombre": "Habitación Deluxe",
-      "precio por noche": "$30.00",
+      "preciopornoche": "$30.00",
       "img": "https://media.gettyimages.com/id/1453121662/es/foto/habitaci%C3%B3n-de-hotel-moderna-con-dos-camas-individuales-iluminadas-con-luces-c%C3%A1lidas.jpg?s=612x612&w=0&k=20&c=Df2YBfJl-LhfUjvtFrxmV4NT5Y_NPqC2w43XNkJ2Cdo="
     },
     {
       "id": 3,
       "nombre": "Suite Presidencial",
-      "precio por noche": "$150.00",
+      "preciopornoche": "$150.00",
       "img": "https://media.gettyimages.com/id/1208851096/es/foto/habitaci%C3%B3n-de-hotel-con-vistas-panor%C3%A1micas-al-b%C3%B3sforo-estambul.jpg?s=612x612&w=0&k=20&c=vrk2QY58YM9PgJsB326D0xyg4c8IUgjQEtQSiMlqTYg="
     },
     {
       "id": 4,
       "nombre": "Suite Presidencial Vista Mar",
-      "precio por noche": "$200.00",
+      "preciopornoche": "$200.00",
       "img": "https://media.gettyimages.com/id/1299710067/es/foto/habitaci%C3%B3n-doble-con-vistas-al-mar.jpg?s=612x612&w=0&k=20&c=6X8BRnerIlxJxwKWWops08vomPaepjQDpdLuheOyBl4="
     },
     {
       "id": 5,
       "nombre": "Suite Presidencial Deluxe",
-      "precio por noche": "$250.00",
+      "preciopornoche": "$250.00",
       "img": "https://media.gettyimages.com/id/1087070322/es/foto/hotel-room-interior.jpg?s=612x612&w=0&k=20&c=l4oD7sfG6UkSRuk6Eg9xMJv4dI66D1RUx6emxS8Xflg="
     },
     {
       "id":6,
       "nombre":"Suite Presidencial Junior",
-      "precio por noche":"$100.00",
+      "preciopornoche":"$100.00",
       "img":"https://media.gettyimages.com/id/171256029/es/foto/hotel-adaptan-a-la-habitaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=OX-Zd8I0ZxIIC6oXhKYAHagZdGSRg5gLjc4LqCSSRW8="
     },
     {
       "id":7,
       "nombre":"Habitacion individual",
-      "precio por noche":"$15.60",
+      "preciopornoche":"$15.60",
       "img":"https://media.gettyimages.com/id/1159130196/es/foto/pompano-beach-florida-united-states-a-luxurious-bedroom-in-the-wyndham-palm-air-resort-which.jpg?s=612x612&w=0&k=20&c=p3SavzIf3QD5oZHuE4kGJadPXTBt3hoOFbPEz6QFhuA="
     },
     {
       "id":8,
       "nombre":"Habitacion doble",
-      "precio por noche":"$30.00",
+      "preciopornoche":"$30.00",
       "img":"https://www.stradivariushotel.com/wp-content/uploads/ss-h2-f1-1.jpg"
     }
   ]
