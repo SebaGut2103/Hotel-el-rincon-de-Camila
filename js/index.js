@@ -47,7 +47,10 @@ function showSlide() {
   }
 }
 
+
+
 //Funcionalidad que muestre las habitaciones (api)
+
 function createRoomCard(room) {
   const card = document.createElement('div');
   card.className = 'bg-white rounded-lg shadow-md overflow-hidden';
@@ -113,3 +116,61 @@ function loadRooms() {
 
 // Cargar las habitaciones cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', loadRooms);
+
+
+//Login
+
+document.getElementById('registration').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevenir la recarga de la página al enviar el formulario
+
+  // Obtener los valores del formulario
+  const fullname = document.getElementById('fullname').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const comments = document.getElementById('comments').value;
+
+  // Verificar si ya existen usuarios registrados en localStorage
+  let users = JSON.parse(localStorage.getItem('users')) || [];
+
+  // Verificar si el correo electrónico ya está registrado
+  const userExists = users.some(user => user.email === email);
+  if (userExists) {
+      alert('Este correo electrónico ya está registrado. Por favor, use otro.');
+      return;
+  }
+
+  // Crear un nuevo objeto usuario
+  const newUser = {
+      fullname,
+      email,
+      phone,
+      comments
+  };
+
+  // Agregar el nuevo usuario al arreglo de usuarios
+  users.push(newUser);
+
+  // Guardar los usuarios en localStorage
+  localStorage.setItem('users', JSON.stringify(users));
+
+  // Redirigir al usuario a la página de reservaciones (simulando el acceso después del registro)
+  alert('Registro exitoso. Ahora puede realizar su reservación.');
+  window.location.href = 'Reserva/Reserva.html'; // Redirige a la página de reservaciones
+});
+
+
+
+//Consulta WSP
+document.addEventListener("DOMContentLoaded", function() {
+  const wspButton = document.getElementById('wsp');
+  
+  wspButton.addEventListener('click', function() {
+      const phoneNumber = '3003554331';  // Reemplaza con el número de teléfono correcto
+      const message = 'Hola,%20me%20interesa%20más%20información%20sobre%20su%20hotel.';
+    
+      const url = 'https://wa.me/' + phoneNumber + '?text=' + message;
+
+      window.open(url, '_blank');
+  });
+});
+
