@@ -72,7 +72,7 @@ function createRoomCard(room) {
 
   const price = document.createElement('p');
   price.className = 'text-gray-600 mt-2';
-  price.textContent = `Precio: ${room.preciopornoche}`;
+  price.textContent = `Precio por noche: ${room.preciopornoche}`;
 
   imageContainer.appendChild(image);
   content.appendChild(title);
@@ -135,42 +135,80 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Login
 const loginBtn = document.getElementById("loginBtn");
-        const loginModal = document.getElementById("loginModal");
-        const closeBtn = document.getElementById("closeBtn");
-        const loginForm = document.getElementById("loginForm");
+const loginModal = document.getElementById("loginModal");
+const closeBtn = document.getElementById("closeBtn");
+const loginForm = document.getElementById("loginForm");
 
-        // Abrir el modal cuando se hace clic en el botón
-        loginBtn.onclick = function() {
-            loginModal.classList.remove("hidden");
-            loginModal.classList.add("flex");
-        }
+// Abrir el modal cuando se hace clic en el botón
+loginBtn.onclick = function() {
+    loginModal.classList.remove("hidden");
+    loginModal.classList.add("flex");
+}
 
-        // Cerrar el modal cuando se hace clic en el botón de cerrar
-        closeBtn.onclick = function() {
+// Cerrar el modal cuando se hace clic en el botón de cerrar (x)
+closeBtn.onclick = function() {
+    loginModal.classList.remove("flex");
+    loginModal.classList.add("hidden");
+}
+
+// Cerrar el modal si el usuario hace clic fuera del contenido del modal
+window.onclick = function(event) {
+    if (event.target === loginModal) {
+        loginModal.classList.remove("flex");
+        loginModal.classList.add("hidden");
+    }
+}
+
+//Funcionamiento del registro 
+
+const registrationForm = document.getElementById('registration');
+
+registrationForm.onsubmit = function(event) {
+    event.preventDefault(); // Evitar el envío convencional del formulario
+
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value
+    const comments = document.getElementById("comments").value;
+
+    // Almacenar los datos en localStorage
+    const userData = {
+        fullname: fullname,
+        email: email,
+        password: password,
+        comments: comments
+    };  
+
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    alert("¡Registro exitoso!");
+}
+
+
+// Manejar el formulario de login
+const login = document.getElementById("loginModal");
+
+loginForm.onsubmit = function(event) {
+    event.preventDefault(); // Evitar el envío convencional del formulario
+
+    const username = document.getElementById("username").value;
+    const mail = document.getElementById("mail").value;
+    const pssword = document.getElementById("pssword").value;
+
+    // Recuperar los datos del usuario desde localStorage
+    const storedUserData = JSON.parse(localStorage.getItem("userData"));
+
+    // Verificar si los datos del usuario existen en localStorage
+    if (storedUserData) {
+        // Comprobar si el nombre de usuario y el correo coinciden con los almacenados
+        if (username === storedUserData.fullname && mail === storedUserData.email) {
+            alert("¡Bienvenido, " + username + "!");
             loginModal.classList.remove("flex");
             loginModal.classList.add("hidden");
+        } else {
+            alert("Usuario o correo incorrectos.");
         }
-
-        // Cerrar el modal si el usuario hace clic fuera del contenido del modal
-        window.onclick = function(event) {
-            if (event.target === loginModal) {
-                loginModal.classList.remove("flex");
-                loginModal.classList.add("hidden");
-            }
-        }
-
-        // Manejar el formulario de login
-        loginForm.onsubmit = function(event) {
-            event.preventDefault(); // Evitar el envío convencional del formulario
-
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            if (username === "admin" && password === "1234") {
-                alert("¡Bienvenido, " + username + "!");
-                loginModal.classList.remove("flex");
-                loginModal.classList.add("hidden");
-            } else {
-                alert("Usuario o contraseña incorrectos.");
-            }
-        } 
+    } else {
+        alert("No se encontraron datos de usuario. Por favor, regístrate.");
+    }
+}
