@@ -48,5 +48,249 @@
       "preciopornoche":"$30.00",
       "img":"https://www.stradivariushotel.com/wp-content/uploads/ss-h2-f1-1.jpg"
     }
+  ],
+  
+  "Habitaciones" :[
+    {
+      "id": 1,
+      "nombre": "Habitación Ejecutiva",
+      "preciopornoche": "$15.60",
+      "descripcion": "Habitación moderna y acogedora, ideal para viajeros de negocios.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/171579719/es/foto/hotel-moderno-dormitorio.jpg?s=612x612&w=0&k=20&c=aixKyHQELoca8pCibWLIdmTu4Sp7WVQ0jB-d23QgEfk="
+    },
+    {
+      "id": 2,
+      "nombre": "Habitación Deluxe",
+      "preciopornoche": "$30.00",
+      "descripcion": "Espaciosa habitación con todas las comodidades para una estancia placentera.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1453121662/es/foto/habitaci%C3%B3n-de-hotel-moderna-con-dos-camas-individuales-iluminadas-con-luces-c%C3%A1lidas.jpg?s=612x612&w=0&k=20&c=Df2YBfJl-LhfUjvtFrxmV4NT5Y_NPqC2w43XNkJ2Cdo="
+    },
+    {
+      "id": 3,
+      "nombre": "Suite Presidencial",
+      "preciopornoche": "$150.00",
+      "descripcion": "Lujosa suite con vistas panorámicas, perfecta para una experiencia de lujo.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1208851096/es/foto/habitaci%C3%B3n-de-hotel-con-vistas-panor%C3%A1micas-al-b%C3%B3sforo-estambul.jpg?s=612x612&w=0&k=20&c=vrk2QY58YM9PgJsB326D0xyg4c8IUgjQEtQSiMlqTYg="
+    },
+    {
+      "id": 4,
+      "nombre": "Suite Presidencial Vista Mar",
+      "preciopornoche": "$200.00",
+      "descripcion": "Suite de lujo con vistas impresionantes al mar y todas las comodidades exclusivas.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1299710067/es/foto/habitaci%C3%B3n-doble-con-vistas-al-mar.jpg?s=612x612&w=0&k=20&c=6X8BRnerIlxJxwKWWops08vomPaepjQDpdLuheOyBl4="
+    },
+    {
+      "id": 5,
+      "nombre": "Suite Presidencial Deluxe",
+      "preciopornoche": "$250.00",
+      "descripcion": "Suite de lujo con diseño elegante y todas las facilidades premium.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1087070322/es/foto/hotel-room-interior.jpg?s=612x612&w=0&k=20&c=l4oD7sfG6UkSRuk6Eg9xMJv4dI66D1RUx6emxS8Xflg="
+    },
+    {
+      "id": 6,
+      "nombre": "Suite Presidencial Junior",
+      "preciopornoche": "$100.00",
+      "descripcion": "Suite elegante para estancias cortas o largas, ideal para ejecutivos.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/171256029/es/foto/hotel-adaptan-a-la-habitaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=OX-Zd8I0ZxIIC6oXhKYAHagZdGSRg5gLjc4LqCSSRW8="
+    },
+    {
+      "id": 7,
+      "nombre": "Habitación Individual",
+      "preciopornoche": "$15.60",
+      "descripcion": "Habitación cómoda y accesible para personas que viajan solas.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1159130196/es/foto/pompano-beach-florida-united-states-a-luxurious-bedroom-in-the-wyndham-palm-air-resort-which.jpg?s=612x612&w=0&k=20&c=p3SavzIf3QD5oZHuE4kGJadPXTBt3hoOFbPEz6QFhuA="
+    },
+    {
+      "id": 8,
+      "nombre": "Habitación Doble",
+      "preciopornoche": "$30.00",
+      "descripcion": "Habitación espaciosa con dos camas, perfecta para parejas o amigos.",
+      "disponibilidad": true,
+      "img": "https://www.stradivariushotel.com/wp-content/uploads/ss-h2-f1-1.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Habitación Familiar",
+      "preciopornoche": "$45.00",
+      "descripcion": "Habitación amplia para familias, con camas adicionales y un ambiente cómodo.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1159130196/es/foto/pompano-beach-florida-united-states-a-luxurious-bedroom-in-the-wyndham-palm-air-resort-which.jpg?s=612x612&w=0&k=20&c=MI5zV9A9PaxuCVEM8rV7rY4QWcycA4xtdfH5wO8KLp8="
+    },
+    {
+      "id": 10,
+      "nombre": "Habitación King Size",
+      "preciopornoche": "$50.00",
+      "descripcion": "Habitación de lujo con cama King Size y vistas panorámicas de la ciudad.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1465890862/es/foto/hotel-room-interior.jpg?s=612x612&w=0&k=20&c=ldlT9V7qK_Sj_v1ngY3lzEkhETy1hxwiwoLzXsLnsdI="
+    },
+    {
+      "id": 11,
+      "nombre": "Suite Familiar",
+      "preciopornoche": "$80.00",
+      "descripcion": "Perfecta para estancias largas con comodidades para toda la familia.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1548749731/es/foto/habitaci%C3%B3n-de-hotel-de-lujo.jpg?s=612x612&w=0&k=20&c=87ZC-56b8vsb_69cK4jxmsD-TGo32el66hr2mA0ZTUs="
+    },
+    {
+      "id": 12,
+      "nombre": "Habitación con Jacuzzi",
+      "preciopornoche": "$120.00",
+      "descripcion": "Habitación de lujo con jacuzzi privado para una experiencia de relajación total.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1615870132/es/foto/habitaci%C3%B3n-con-jacuzzi.jpg?s=612x612&w=0&k=20&c=QSOqrYhYZ1m5s3q7q4JVmRZAvlAxdP0zQ1LqB-J4Bzg="
+    },
+    {
+      "id": 13,
+      "nombre": "Suite Junior",
+      "preciopornoche": "$90.00",
+      "descripcion": "Suite junior con una decoración moderna y vistas espectaculares.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1621228795/es/foto/suite-junior.jpg?s=612x612&w=0&k=20&c=jhzCZt9pGoZDAX9vn9saV5MnV4Cbd69pGO36x3UNpFc="
+    },
+    {
+      "id": 14,
+      "nombre": "Habitación con Terraza",
+      "preciopornoche": "$85.00",
+      "descripcion": "Habitación con terraza privada para disfrutar de las vistas y el aire fresco.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1529787612/es/foto/habitaci%C3%B3n-con-terraza.jpg?s=612x612&w=0&k=20&c=Q_WkbCRGmnw1Zk5d4rhXRsWLkhZqqvfeqq0Zjo3wA9Y="
+    },
+    {
+      "id": 15,
+      "nombre": "Suite Real",
+      "preciopornoche": "$400.00",
+      "descripcion": "La suite más lujosa del hotel, con diseño real y todas las comodidades exclusivas.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1344324239/es/foto/suite-real.jpg?s=612x612&w=0&k=20&c=Qmb3nVjvWmzQ_gzMNS6bBzlk4K4s4z0a2J27AcXpIM0="
+    },
+    {
+      "id": 16,
+      "nombre": "Habitación Estándar",
+      "preciopornoche": "$25.00",
+      "descripcion": "Habitación básica y funcional para estancias económicas.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1104047844/es/foto/habitaci%C3%B3n-est%C3%A1ndar.jpg?s=612x612&w=0&k=20&c=huXY1mnDscnTxMPFEbUlJ48rHOfPHi67Db5XBO6Hgrk="
+    },
+    {
+      "id": 17,
+      "nombre": "Habitación Triple",
+      "preciopornoche": "$45.00",
+      "descripcion": "Habitación amplia con tres camas individuales, ideal para grupos.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1531015391/es/foto/habitaci%C3%B3n-hotel-triple.jpg?s=612x612&w=0&k=20&c=5RAhZUtDNzQZje-N2mNYzUQShZspw_rzYZ1JEnLfAjI="
+    },
+    {
+      "id": 18,
+      "nombre": "Habitación con Vista a la Ciudad",
+      "preciopornoche": "$65.00",
+      "descripcion": "Habitación con vistas impresionantes a la ciudad y un diseño elegante.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1182745013/es/foto/habitaci%C3%B3n-con-vista-a-la-ciudad.jpg?s=612x612&w=0&k=20&c=JdEdJzA7XxlQSTnsjlhHqbGeMTBYJ4zqLZ7I5iK1Vvs="
+    },
+    {
+      "id": 19,
+      "nombre": "Suite Ejecutiva",
+      "preciopornoche": "$130.00",
+      "descripcion": "Una suite sofisticada con comodidades de alto nivel, perfecta para ejecutivos.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1566751093/es/foto/suite-ejecutiva.jpg?s=612x612&w=0&k=20&c=l1uVzJxKO9c9xGvfoVRJwRNBt8XDhP-iS03TkKpmgmc="
+    },
+    {
+      "id": 20,
+      "nombre": "Habitación con Vista al Lago",
+      "preciopornoche": "$120.00",
+      "descripcion": "Habitación con vistas espectaculares al lago y todas las comodidades para una estancia placentera.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1345315202/es/foto/habitaci%C3%B3n-con-vista-al-lago.jpg?s=612x612&w=0&k=20&c=ykc3gZtSeYQbSM7Hl6nJ3UzX5exylrBVsTCFZ-PfQng="
+    },
+    {
+      "id": 21,
+      "nombre": "Habitación con Piscina Privada",
+      "preciopornoche": "$200.00",
+      "descripcion": "Habitación exclusiva con acceso a una piscina privada.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1535615621/es/foto/habitaci%C3%B3n-con-piscina-privada.jpg?s=612x612&w=0&k=20&c=ZT-KsIl_Tq0l2hK2jgmG5bi9wQmKhNT0zozZ1kpA8jc="
+    },
+    {
+      "id": 22,
+      "nombre": "Habitación Premier",
+      "preciopornoche": "$75.00",
+      "descripcion": "Habitación con acabados de lujo y una decoración moderna y sofisticada.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1232243313/es/foto/habitaci%C3%B3n-premier.jpg?s=612x612&w=0&k=20&c=jlY2n8D3pHTV02ZjkbW0U1DWzxo2dnHMiH-MqpG9mpw="
+    },
+    {
+      "id": 23,
+      "nombre": "Habitación Zen",
+      "preciopornoche": "$80.00",
+      "descripcion": "Habitación tranquila y relajante con estilo zen para una estancia de bienestar.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1084023319/es/foto/habitaci%C3%B3n-zen.jpg?s=612x612&w=0&k=20&c=GnmHUzdlb3ZXyxqg5nbv2x6bStzNgnni4mZm_Mv_6cQ="
+    },
+    {
+      "id": 24,
+      "nombre": "Habitación de Lujo",
+      "preciopornoche": "$170.00",
+      "descripcion": "Una habitación sofisticada con tecnología avanzada y comodidades exclusivas.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1456123162/es/foto/habitaci%C3%B3n-de-lujo.jpg?s=612x612&w=0&k=20&c=yWpNnsSZge3gIk5I9uLSq6AO2NSGtsS69VlxV4v0NxM="
+    },
+    {
+      "id": 25,
+      "nombre": "Habitación con Balcón",
+      "preciopornoche": "$55.00",
+      "descripcion": "Habitación con balcón privado, perfecta para disfrutar de las vistas al exterior.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1069871649/es/foto/habitaci%C3%B3n-con-balcon.jpg?s=612x612&w=0&k=20&c=Xhx7SyX37_8bdbv8UonZic7lDsHc2jfpMt7SMzEdXW8="
+    },
+    {
+      "id": 26,
+      "nombre": "Suite con Vista Panorámica",
+      "preciopornoche": "$250.00",
+      "descripcion": "Suite de lujo con vistas panorámicas a la ciudad y todas las comodidades.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1567745620/es/foto/suite-con-vista-panor%C3%A1mica.jpg?s=612x612&w=0&k=20&c=OVhZT0y1bIco1yEshjeIdH6KNhEK4vbHlNTLxg14qlE="
+    },
+    {
+      "id": 27,
+      "nombre": "Habitación con Chimenea",
+      "preciopornoche": "$90.00",
+      "descripcion": "Habitación acogedora con chimenea, ideal para los días fríos.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1245356719/es/foto/habitaci%C3%B3n-con-chimenea.jpg?s=612x612&w=0&k=20&c=9Z0Y3OZ5eijjrlh7iq0F33v5m-d4Lkr5tPGeVwp_t2E="
+    },
+    {
+      "id": 28,
+      "nombre": "Habitación Premium",
+      "preciopornoche": "$150.00",
+      "descripcion": "Habitación premium con decoración de lujo y todas las comodidades de un hotel cinco estrellas.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1529787633/es/foto/habitaci%C3%B3n-premium.jpg?s=612x612&w=0&k=20&c=a_-SySPV-Hi3G2xeet7Vceflz07bk0Vqu1lcZnsYDTM="
+    },
+    {
+      "id": 29,
+      "nombre": "Habitación con Vista al Jardín",
+      "preciopornoche": "$60.00",
+      "descripcion": "Habitación tranquila con vistas a un hermoso jardín privado.",
+      "disponibilidad": true,
+      "img": "https://media.gettyimages.com/id/1456745203/es/foto/habitaci%C3%B3n-con-vista-al-jard%C3%ADn.jpg?s=612x612&w=0&k=20&c=sxybVJ9hz91auUfgz9vPzgyRtJlHH4qFYyDzT4fI7R8="
+    },
+    {
+      "id": 30,
+      "nombre": "Habitación con Terraza y Jacuzzi",
+      "preciopornoche": "$250.00",
+      "descripcion": "Exclusiva habitación con terraza privada y jacuzzi para disfrutar de una experiencia única.",
+      "disponibilidad": false,
+      "img": "https://media.gettyimages.com/id/1715823109/es/foto/suite-con-terraza-y-jacuzzi.jpg?s=612x612&w=0&k=20&c=hb-i9dq9hTj1hZCjjsrrHW62zF-XQFXwCw1Xh6w7Dhw="
+    }
   ]
+  
 }
