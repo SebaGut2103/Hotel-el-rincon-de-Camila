@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva</title>
@@ -9,17 +10,17 @@
 </head>
 
 <body class="bg-blue-900">
-    <header class="bg-blue-400 p-1 flex items-center justify-between">
+    <header class="sticky top-0 z-10 bg-blue-400 p-1 flex items-center justify-between">
         <div class="overflow-hidden rounded-full border-gray-800">
             <img class="w-16 object-cover" src="/img/logo.jpg" alt="logo" />
         </div>
         <h1 class="text-gray-50 text-4xl">Hotel el Rincón de Camila</h1>
         <div class="flex flex-rows gap-10">
             <div>
-               <a href="""><input class="w-28 h-8 rounded-3xl" type="button" value="Inicio" /></a>
+               <a href="/index.html""><input class="w-28 h-8 rounded-3xl" type="button" value="Inicio" /></a>
             </div>
             <div>
-                <input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" />
+                <a href="/Contacto/Contacto.html"><input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" /></a>
             </div>
             <div>
                 <input class="w-28 h-8 rounded-3xl" type="button" value="Iniciar-Sesión" />
@@ -29,11 +30,21 @@
     <div id="wsp" class="overflow-hidden fixed left-2 top-72 z-10 border-double border-gray-800">
         <a href=""><img src="/wsp.png" alt="wsp" class="w-32 object-cover" /></a>
     </div>
-
+    <div class="flex justify-center p-3">
+        <h2 class="text-6xl text-white">Reserva tu habición</h2>
+    </div>
  <!-- Contenedor de las tarjetas de habitaciones -->
  <section class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6" id="rooms-container">
     <!-- Las tarjetas se agregarán aquí dinámicamente -->
   </section>
+  <footer class="bg-blue-400 p-1 flex items-center gap-10 justify-between">
+    <p class="text-3xl text-white"><b>©2025</b> Juan Sebastian Gutierrez Fuentes Grupo: C-4</p>
+    <div id="logos" class="flex flex-rows gap-10">
+        <div class="overflow-hidden rounded-full"><img class="h-20 object-cover" src="/img/ig.png" alt=""></div>
+        <div class="overflow-hidden rounded-full "><img src="/img/facebook-new.png" alt="" class="h-20 object-cover">
+        </div>
+    </div>
+</footer>
 </body>
 <script src="/js/reserva.js" ></script>
 </html>

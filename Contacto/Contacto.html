@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-blue-900">
+    <header class="bg-blue-400 p-1 sticky top-0 z-10 flex items-center justify-between">
+        <div class="overflow-hidden rounded-full border-gray-800">
+            <img class="w-16 object-cover" src="/img/logo.jpg" alt="logo" />
+        </div>
+        <h1 class="text-gray-50 text-4xl">Hotel el Rincón de Camila</h1>
+        <div class="flex flex-rows gap-10">
+            <div>
+                <a href="/index.html""><input class="w-28 h-8 rounded-3xl" type="button" value="Inicio" /></a>
+             </div>
+            <div>
+               <a href="/Reserva/Reserva.html"><input class="w-28 h-8 rounded-3xl" type="button" value="Reserva" /></a>
+            </div>
+            <div>
+                <input id="loginBtn" class="w-28 h-8 rounded-3xl" type="button" value="Iniciar-Sesión" />
+            </div>
+        </div>
+    </header>
+    <div id="wsp" class="overflow-hidden fixed left-2 top-72 z-10 border-double border-gray-800">
+        <a href=""><img src="/wsp.png" alt="wsp" class="w-32 object-cover" /></a>
+    </div>
+    <div class="flex justify-center p-6">
+            <h2 class="text-6xl text-white">Nuestros Contactos</h2>
+    </div>  
+</body>
+<script src="/js/Contacto.js"></script>
+</html>

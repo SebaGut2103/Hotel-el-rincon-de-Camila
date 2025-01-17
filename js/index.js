@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //Login
+// Modal de login
 const loginBtn = document.getElementById("loginBtn");
 const loginModal = document.getElementById("loginModal");
 const closeBtn = document.getElementById("closeBtn");
@@ -159,56 +160,74 @@ window.onclick = function(event) {
     }
 }
 
-//Funcionamiento del registro 
-
-const registrationForm = document.getElementById('registration');
-
-registrationForm.onsubmit = function(event) {
-    event.preventDefault(); // Evitar el envío convencional del formulario
-
-    const fullname = document.getElementById("fullname").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value
-    const comments = document.getElementById("comments").value;
-
-    // Almacenar los datos en localStorage
-    const userData = {
-        fullname: fullname,
-        email: email,
-        password: password,
-        comments: comments
-    };  
-
-    localStorage.setItem("userData", JSON.stringify(userData));
-
-    alert("¡Registro exitoso!");
-}
-
-
-// Manejar el formulario de login
-const login = document.getElementById("loginModal");
-
+// Manejo del formulario de login
 loginForm.onsubmit = function(event) {
     event.preventDefault(); // Evitar el envío convencional del formulario
 
     const username = document.getElementById("username").value;
     const mail = document.getElementById("mail").value;
-    const pssword = document.getElementById("pssword").value;
+    const password = document.getElementById("pssword").value;
 
-    // Recuperar los datos del usuario desde localStorage
-    const storedUserData = JSON.parse(localStorage.getItem("userData"));
-
-    // Verificar si los datos del usuario existen en localStorage
-    if (storedUserData) {
-        // Comprobar si el nombre de usuario y el correo coinciden con los almacenados
-        if (username === storedUserData.fullname && mail === storedUserData.email) {
+    // Enviar los datos al servidor con fetch (POST o GET)
+    fetch('http://localhost:3000/Registerlogin', {
+        method: 'POST', // O 'GET' si es el caso
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, email: mail, password }) // Enviamos los datos en formato JSON
+    })
+    .then(response => response.json()) // Procesar la respuesta
+    .then(data => {
+        if (data.success) {
             alert("¡Bienvenido, " + username + "!");
             loginModal.classList.remove("flex");
             loginModal.classList.add("hidden");
         } else {
             alert("Usuario o correo incorrectos.");
         }
-    } else {
-        alert("No se encontraron datos de usuario. Por favor, regístrate.");
-    }
-}
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un error al intentar iniciar sesión.');
+    });
+};
+
+
+//Funcionamiento del registro 
+
+registrationForm.onsubmit = function(event) {
+  event.preventDefault(); // Evitar el envío convencional del formulario
+
+  const fullname = document.getElementById("fullname").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const comments = document.getElementById("comments").value;
+
+  // Crear el objeto de datos que vamos a enviar
+  const userData = {
+      fullname: fullname,
+      email: email,
+      password: password,
+      comments: comments
+  };
+
+  // Enviar los datos al servidor con fetch (POST)
+  fetch('http://localhost:3000/Registerlogin', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userData) // Convertimos el objeto en JSON
+  })
+  .then(response => response.json()) // Procesamos la respuesta JSON
+  .then(data => {
+      if (data.success) {
+          alert('¡Registro exitoso!');
+      } else {
+          alert('Hubo un problema con el registro.');
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+};
