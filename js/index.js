@@ -195,39 +195,29 @@ loginForm.onsubmit = function(event) {
 
 //Funcionamiento del registro 
 
-registrationForm.onsubmit = function(event) {
-  event.preventDefault(); // Evitar el envío convencional del formulario
+  const formulario = document.getElementById("registration");
 
-  const fullname = document.getElementById("fullname").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const comments = document.getElementById("comments").value;
+  formulario.addEventListener("submit", async (evento) => {
+      evento.preventDefault();
 
-  // Crear el objeto de datos que vamos a enviar
-  const userData = {
-      fullname: fullname,
-      email: email,
-      password: password,
-      comments: comments
-  };
+      const nombre = document.getElementById("fullname").value;
+      const correo = document.getElementById("email").value;
+      const contraseña = document.getElementById("password").value;
 
-  // Enviar los datos al servidor con fetch (POST)
-  fetch('http://localhost:3000/Registerlogin', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(userData) // Convertimos el objeto en JSON
-  })
-  .then(response => response.json()) // Procesamos la respuesta JSON
-  .then(data => {
-      if (data.success) {
-          alert('¡Registro exitoso!');
-      } else {
-          alert('Hubo un problema con el registro.');
+      try {
+          const url = 'http://localhost:3000/Usuarios';
+          const response = await fetch(url, {
+              method: 'POST',
+              body: JSON.stringify({ nombre, correo, contraseña }),
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          });
+
+          if (!response.ok) {
+              console.log("h")
+          }
+      } catch (error) {
+          console.log(error);
       }
-  })
-  .catch(error => {
-      console.error('Error:', error);
   });
-};

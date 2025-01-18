@@ -31,26 +31,25 @@
       "img": "https://media.gettyimages.com/id/1087070322/es/foto/hotel-room-interior.jpg?s=612x612&w=0&k=20&c=l4oD7sfG6UkSRuk6Eg9xMJv4dI66D1RUx6emxS8Xflg="
     },
     {
-      "id":6,
-      "nombre":"Suite Presidencial Junior",
-      "preciopornoche":"$100.00",
-      "img":"https://media.gettyimages.com/id/171256029/es/foto/hotel-adaptan-a-la-habitaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=OX-Zd8I0ZxIIC6oXhKYAHagZdGSRg5gLjc4LqCSSRW8="
+      "id": 6,
+      "nombre": "Suite Presidencial Junior",
+      "preciopornoche": "$100.00",
+      "img": "https://media.gettyimages.com/id/171256029/es/foto/hotel-adaptan-a-la-habitaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=OX-Zd8I0ZxIIC6oXhKYAHagZdGSRg5gLjc4LqCSSRW8="
     },
     {
-      "id":7,
-      "nombre":"Habitacion individual",
-      "preciopornoche":"$15.60",
-      "img":"https://media.gettyimages.com/id/1159130196/es/foto/pompano-beach-florida-united-states-a-luxurious-bedroom-in-the-wyndham-palm-air-resort-which.jpg?s=612x612&w=0&k=20&c=p3SavzIf3QD5oZHuE4kGJadPXTBt3hoOFbPEz6QFhuA="
+      "id": 7,
+      "nombre": "Habitacion individual",
+      "preciopornoche": "$15.60",
+      "img": "https://media.gettyimages.com/id/1159130196/es/foto/pompano-beach-florida-united-states-a-luxurious-bedroom-in-the-wyndham-palm-air-resort-which.jpg?s=612x612&w=0&k=20&c=p3SavzIf3QD5oZHuE4kGJadPXTBt3hoOFbPEz6QFhuA="
     },
     {
-      "id":8,
-      "nombre":"Habitacion doble",
-      "preciopornoche":"$30.00",
-      "img":"https://www.stradivariushotel.com/wp-content/uploads/ss-h2-f1-1.jpg"
+      "id": 8,
+      "nombre": "Habitacion doble",
+      "preciopornoche": "$30.00",
+      "img": "https://www.stradivariushotel.com/wp-content/uploads/ss-h2-f1-1.jpg"
     }
   ],
-  
-  "Habitaciones" :[
+  "Habitaciones": [
     {
       "id": 1,
       "nombre": "Habitación Ejecutiva",
@@ -292,21 +291,18 @@
       "img": "https://www.royalsorrento.com/wp-content/uploads/sites/343/2021/10/Imperial2-2200x1100.jpeg "
     }
   ],
-  "Registerlogin":[
-    {
-      "correo": "ejemplo@dominio.com",
-      "usuario": "usuario123",
-      "contraseña": "contraseñaSegura"
-    } 
-  ],
-  "comments": [
+  "Usuarios": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "correo": "",
+      "usuario": "",
+      "contraseña": ""
+    },
+    {
+      "nombre": "JuanSeba",
+      "correo": "jaunse@gmail",
+      "contraseña": "123",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
