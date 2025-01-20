@@ -293,16 +293,22 @@
   ],
   "Usuarios": [
     {
-      "id": 1,
-      "correo": "",
-      "usuario": "",
-      "contraseña": ""
-    },
-    {
       "nombre": "JuanSeba",
       "correo": "jaunse@gmail",
       "contraseña": "123",
+      "id": 1
+    },
+    {
+      "nombre": "Yordi ",
+      "correo": "yordi@gmail.com",
+      "contraseña": "1234",
       "id": 2
+    },
+    {
+      "nombre": "Niki Lauda",
+      "correo": "formula@gmail.com",
+      "contraseña": "1975",
+      "id": 3
     }
   ]
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
     <meta charset="UTF-8">
@@ -8,7 +7,6 @@
     <title>Reserva</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-
 <body class="bg-blue-900">
     <header class="sticky top-0 z-10 bg-blue-400 p-1 flex items-center justify-between">
         <div class="overflow-hidden rounded-full border-gray-800">
@@ -17,13 +15,13 @@
         <h1 class="text-gray-50 text-4xl">Hotel el Rincón de Camila</h1>
         <div class="flex flex-rows gap-10">
             <div>
-               <a href="/index.html""><input class="w-28 h-8 rounded-3xl" type="button" value="Inicio" /></a>
+                <a href="/index.html"><input class="w-28 h-8 rounded-3xl" type="button" value="Inicio" /></a>
             </div>
             <div>
                 <a href="/Contacto/Contacto.html"><input class="w-28 h-8 rounded-3xl" type="button" value="Contacto" /></a>
             </div>
             <div>
-                <input class="w-28 h-8 rounded-3xl" type="button" value="Iniciar-Sesión" />
+                <input id="loginBtn" class="w-28 h-8 rounded-3xl" type="button" value="Iniciar-Sesión" />
             </div>
         </div>
     </header>
@@ -31,20 +29,22 @@
         <a href=""><img src="/wsp.png" alt="wsp" class="w-32 object-cover" /></a>
     </div>
     <div class="flex justify-center p-3">
-        <h2 class="text-6xl text-white">Reserva tu habición</h2>
+        <h2 class="text-6xl text-white">Reserva tu habitación</h2>
     </div>
- <!-- Contenedor de las tarjetas de habitaciones -->
- <section class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6" id="rooms-container">
-    <!-- Las tarjetas se agregarán aquí dinámicamente -->
-  </section>
-  <footer class="bg-blue-400 p-1 flex items-center gap-10 justify-between">
-    <p class="text-3xl text-white"><b>©2025</b> Juan Sebastian Gutierrez Fuentes Grupo: C-4</p>
-    <div id="logos" class="flex flex-rows gap-10">
-        <div class="overflow-hidden rounded-full"><img class="h-20 object-cover" src="/img/ig.png" alt=""></div>
-        <div class="overflow-hidden rounded-full "><img src="/img/facebook-new.png" alt="" class="h-20 object-cover">
+    <!-- Contenedor de las tarjetas de habitaciones -->
+    <section class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6" id="rooms-container">
+        <!-- Las tarjetas se agregarán aquí dinámicamente -->
+    </section>
+    <footer class="bg-blue-400 p-1 flex items-center gap-10 justify-between">
+        <p class="text-3xl text-white"><b>©2025</b> Juan Sebastian Gutierrez Fuentes Grupo: C-4</p>
+        <div id="logos" class="flex flex-rows gap-10">
+            <div class="overflow-hidden rounded-full"><img class="h-20 object-cover" src="/img/ig.png" alt=""></div>
+            <div class="overflow-hidden rounded-full "><img src="/img/facebook-new.png" alt="" class="h-20 object-cover"></div>
         </div>
-    </div>
-</footer>
+    </footer>
+    <div class="requiere-sesion hidden"></div>
 </body>
-<script src="/js/reserva.js" ></script>
+<script src="/js/reserva.js"></script>
+<script  src="/js/usuario.js" defer></script> 
+
 </html>

@@ -99,5 +99,4 @@ function createRoomCard(room) {
   // Cargar las habitaciones cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', loadRooms);
 
-  //Login
   
